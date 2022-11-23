@@ -104,9 +104,9 @@
           var people = markerData[i]['おすすめした人'];
           var comment = markerData[i]['おすすめの一品・コメント'];
 
-          sidebar_html += `<b>${i + 1}</b> <a href="javascript:openWindow(${i})">${name}<\/a> 
-                              <b>|単価：</b><a href="javascript:openWindow(${i})">${price}<\/a>
-                              <b>|ジャンル：</b><a href="javascript:openWindow(${i})">${jyanru}<\/a><br />`;
+          sidebar_html += `<b>${i + 1}.【</b> <a href="javascript:openWindow(${i})">${name}<\/a> <b>】</b>
+                              <b>|単価：${price}|ジャンル：${jyanru}</b>
+                              <br />`;
         }
 
         document.getElementById("sidebar").innerHTML = `<a target="_blank" href="https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit?usp=sharing">元データ(Google スプレッドシート)</a><br /><br /><br />` + sidebar_html;
