@@ -84,7 +84,8 @@
           map: map
         });
 
-        var info = '<div style="font-size:18px;font-weight:bold;margin-bottom:10px;">' + '<a href="$data['URL']">$data['名称']</a>'　 + data['名称'] + '|' +　data['ジャンル'] + '</div>';
+        var tmp =  '<a href="' + data['URL'] + '">' + data['名称'] + '</a>'
+        var info = '<div style="font-size:18px;font-weight:bold;margin-bottom:10px;">' + tmp + data['名称'] + '|' +　data['ジャンル'] + '</div>';
         infoWindow[i] = new google.maps.InfoWindow({
           content: info
         });
